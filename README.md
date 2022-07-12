@@ -102,6 +102,14 @@ To deal with this bottleneck, HTTP/2 uses HPACK compression to decrease the aver
 5. Conclusion : 
      The influence and control of HTTP/2 in the cyber world are absolutely inexorable. The core features of HTTP/2 provide greater levels of control that can be used to optimize the web application performance. Certainly, the tech world is rapidly evolving with each passing year, which needs advanced technologies every now and then. HTTP/3 is the upcoming internet protocol developed to fix the shortcomings of its predecessor. However, there is so much left to do, and HTTP/2 is not going away any time soon.
 
+About HTTP/3 :
+     HTTP/3 protocol is the latest version of HTTP that will impact the communication between clients and servers, with significant upgrades for user experience, including API security, reliability, and performance. While the HTTP semantics are consistent across all versions, HTTP/3 differs from its precursors due to the mapping of these semantics to underlying transports.
+
+Both HTTP/1.1 and HTTP/2 use TCP as their transport, whereas HTTP/3 is based on Google’s QUIC – a transport layer network protocol that implements user space congestion control over UDP (User Datagram Protocol).
+
+It has come with many solutions, such as decreased effects of packet loss, zero round-trip time, more comprehensive encryption, and faster connection establishment, to fix HTTP/2’s shortcomings. HTTP/3 will soon be the standard protocol and has already seen a huge roll in libraries, infrastructures, and browsers.
+
+Image Reference :![http1 vs http2 vs http3](https://user-images.githubusercontent.com/108857891/178522447-46a5bade-b416-4c2f-8a2b-bce1b5216edd.png)
 
 
 
