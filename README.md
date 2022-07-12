@@ -113,6 +113,56 @@ Image Reference : ![http1 vs http2 vs http3](https://user-images.githubuserconte
 
 
 
+--------------------------------------------------------------xxxxxxxxxxxxxxxxxxxxx---------------------------------------------------------------------------------
 
 
 
+2. About Objects and its Internal Representation in JavaScript :
+    In JavaScript Objects may be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc.
+    
+Creating Objects in JavaScript :
+          1.By object literal
+          2.By creating instance of Object directly (using new keyword)
+
+1. By object literal : 
+      The syntax of creating object using object literal is given below :
+         object={
+                 property1:value1,
+                 property2:value2,
+                 propertyN:valueN,
+                 }
+      Property and value is separated by colon(:)
+   Example : var obj={
+                      name:"johndoe",
+                      age:23,
+                      year:2018
+                     };
+                 
+ 2. By creating instance of Object directly (using new keyword) :
+         The syntax of creating object directly is given below:        
+             var objectname=new object();    
+                 
+      Here, new keyword is used to create object.
+   Example :  var emp=newobject();
+              emp.id=101;
+              emp.name="xxxx";
+              emp.salary=25000;
+               
+Accessing JavaScript Objects : 
+      The syntax for accessing the property of an object is :
+              objectName.property 
+              or 
+              objectName["property"]
+                 
+Accessing Methods :
+      1. Using(.) operator
+      2. Using [] 
+      
+Example : 
+      1. console.log(obj.name);
+      2. console.log(obj["name"];
+      
+      
+      
+      
+      
