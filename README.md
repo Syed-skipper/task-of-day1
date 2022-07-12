@@ -26,7 +26,7 @@ Launching of the HTTP/2 was an attempt to overcome the limitations of HTTP/1.1 a
                 5.Compression
                 6.Conclusion
                 
- 1. The Background : 
+1. The Background : 
      For better contextualization of the certain alterations that HTTP/2 made to its precursor, we’ll take a quick look at their basic functionalities and                development details first.
 
 HTTP/1.1 : 
