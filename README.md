@@ -7,7 +7,7 @@ In 1989, Tim Berners-Lee invented HTTP. HTTP/1.1 was its 1st standardized versio
       
 HTTP/1 was known to have poor response time. With websites becoming more resource-intensive, the protocol was losing its efficiency. It progressively became         essential to minimize latency and boost page load speeds.Years later, the IETF, Google, Microsoft, and Facebook released the fully-comprehensive and well-tested     newer version of HTTP in 2015.
       
-Image Reference :![http1 vs http2 multiplexing](https://user-images.githubusercontent.com/108857891/178521545-ae51b64f-4052-4b40-9b96-e706ae0d4a20.png)
+Image Reference : ![http1 vs http2 multiplexing](https://user-images.githubusercontent.com/108857891/178521545-ae51b64f-4052-4b40-9b96-e706ae0d4a20.png)
  
 
 HTTP 2 PROTOCOL :
@@ -43,7 +43,7 @@ HTTP/2 was released at Google as the significant improvement of its predecessor.
 
 The major feature that differentiates HTTP/2 from HTTP/1.1 is the binary framing layer. Unlike HTTP/1.1, HTTP/2 uses a binary framing layer. This layer              encapsulates messages – converted to its binary equivalent – while making sure that its HTTP semantics (method details, header information, etc.) remain            untamed. This feature of HTTP/2 enables gRPC to use lesser resources.           
                
-2.Delivery Models : 
+2. Delivery Models : 
       As discussed before, HTTP/1.1 sends messages as plain text, and HTTP/2 encodes them into binary data and arranges them carefully. This implies that HTTP/2 can have various delivery models.Most of the time, a client's initial response in return for an HTTP GET request is not the fully-loaded page. Fetching additional resources from the server requires that the client send repeated requests, break or form the TCP connection repeatedly for them.As you can conclude already, this process will consume lots of resources and time.
 
 HTTP/1.1
@@ -62,7 +62,7 @@ The problems of HTTP/1.1 looks resolved to a great extent here. However, at time
 
 Image Reference : ![http1 vs http2 responce time](https://user-images.githubusercontent.com/108857891/178519223-f625ddf3-7e46-41ff-81c8-d8e03232584e.png)
 
-3.Predicting Resource Requests :
+3. Predicting Resource Requests :
        As already discussed, the client receives an HTML page on sending a GET request. While examining the page contents, the client determines that it needs additional resources for rendering the page and makes further requests to fetch these resources. As a consequence of these requests, the connection load time increases. Since the server already knows that the client needs additional files, it can save the client time by sending these resources before requesting; thus, offering a great solution to the problem.
 
 HTTP/1.1 :
@@ -73,7 +73,7 @@ HTTP/2 :
 
 As HTTP/2 supports multiple simultaneous responses to the client’s initial GET request, the server provides the required resource along with the requested HTML page. This is called the server push process, which performs the resource inlining like its precursor while keeping the page and the pushed resource separate. This process fixes the main drawback of resource inlining by enabling the client machine to decide to cache/decline the pushed resource separate from the HTML page.
                 
-4.Buffer Overflow : 
+4. Buffer Overflow : 
       Server and client machine TCP connection requires both of these to have a certain buffer space for holding incoming requests.Though these buffers can hold numerous or large requests, they may also lack space due to small or limited buffer size. It causes buffer overflow at receiver’s end, resulting in data packet loss. For example, packets received after the buffer is full, will be lost.
 
 To prevent it from happening, a flow control mechanism stops the sender from transmitting an overwhelming amount of data to the receiver side.
@@ -88,7 +88,7 @@ HTTP/2 :
 
 It multiplexes data streams utilizing the same (one) TCP connection. So, in this case, both machines can implement their flow controls instead of using the transport layer. The application layer shares the available buffer size data, after which, both machines set their receive window details on the multiplexed streams level. In addition, the flow control mechanism does not need to wait for the signal to reach its destination before modifying the receive window.                
                 
-5.Compression :
+5. Compression :
      Every HTTP transfer contains headers that describe the sent resource and its properties. This metadata can add up to 1KB or more of overhead per transfer, impacting the overall performance. For minimizing this overhead and boosting performance, compressions algorithms must be used to reduce the size of HTTP messages that travels between the machines.
                 
 HTTP/1.1 :
@@ -99,17 +99,17 @@ HTTP/2 :
 
 To deal with this bottleneck, HTTP/2 uses HPACK compression to decrease the average size of the header. This compression program encodes the header metadata using Huffman coding, which significantly reduces its size as a result. 
 
-5. Conclusion : 
+6. Conclusion : 
      The influence and control of HTTP/2 in the cyber world are absolutely inexorable. The core features of HTTP/2 provide greater levels of control that can be used to optimize the web application performance. Certainly, the tech world is rapidly evolving with each passing year, which needs advanced technologies every now and then. HTTP/3 is the upcoming internet protocol developed to fix the shortcomings of its predecessor. However, there is so much left to do, and HTTP/2 is not going away any time soon.
 
 About HTTP/3 :
-     HTTP/3 protocol is the latest version of HTTP that will impact the communication between clients and servers, with significant upgrades for user experience, including API security, reliability, and performance. While the HTTP semantics are consistent across all versions, HTTP/3 differs from its precursors due to the mapping of these semantics to underlying transports.
+      HTTP/3 protocol is the latest version of HTTP that will impact the communication between clients and servers, with significant upgrades for user experience, including API security, reliability, and performance. While the HTTP semantics are consistent across all versions, HTTP/3 differs from its precursors due to the mapping of these semantics to underlying transports.
 
 Both HTTP/1.1 and HTTP/2 use TCP as their transport, whereas HTTP/3 is based on Google’s QUIC – a transport layer network protocol that implements user space congestion control over UDP (User Datagram Protocol).
 
 It has come with many solutions, such as decreased effects of packet loss, zero round-trip time, more comprehensive encryption, and faster connection establishment, to fix HTTP/2’s shortcomings. HTTP/3 will soon be the standard protocol and has already seen a huge roll in libraries, infrastructures, and browsers.
 
-Image Reference :![http1 vs http2 vs http3](https://user-images.githubusercontent.com/108857891/178522447-46a5bade-b416-4c2f-8a2b-bce1b5216edd.png)
+Image Reference : ![http1 vs http2 vs http3](https://user-images.githubusercontent.com/108857891/178522447-46a5bade-b416-4c2f-8a2b-bce1b5216edd.png)
 
 
 
